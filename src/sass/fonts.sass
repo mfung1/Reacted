@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css?family=Merriweather|Montserrat:700')
+
+// Default Styles
+
+h1,h2,h3,h4
+  font-family: Montserrat
+  font-weight: 300
+  margin: 0
+
+h1
+  font-size: 3rem
+
+h2
+  font-size: 2rem
+
+h3
+  font-size: 1.5rem
+
+p, span, a
+  font-family: Merriweather
+  font-weight: normal
+  font-size: 1rem
+/* 24px @ 320px increasing to 48px @ 1920px */
+@media (min-width: 320px)
+  h2
+    font-size: calc(1.5rem + ((1vw - 3.2px) * 1.5))
+    /* Where: * 1.5 = 100 * font_Size_Difference / viewport_Width_Difference */
+/* Prevent font scaling beyond this breakpoint */
+@media (min-width: 1920px)
+  h2
+    font-size: 48px

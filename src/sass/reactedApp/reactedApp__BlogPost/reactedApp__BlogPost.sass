@@ -1,0 +1,23 @@
+.BlogPost__post
+  margin: 12px 0
+  max-width: 100%
+  transition: max-width 0.5s linear
+  @media (min-width: 720px)
+    max-width: 50%
+    display: inline-block
+    transition: max-width 0.5s linear
+  .BlogPost__post-title
+    width: 100%
+    max-width: 100%
+    margin-bottom: 12px
+    display: block
+    /* 16px @ 320px increasing to 24px @ 1920px */
+    @media (min-width: 320px)
+      font-size: calc(1rem + ((1vw - 3.2px) * 0.5))
+        /* Where: * 0.5 = 100 * font_Size_Difference / viewport_Width_Difference */
+    /* Prevent font scaling beyond this breakpoint */
+    @media (min-width: 1920px)
+      font-size: 24px
+  .BlogPost__post-thumbnail
+    width: 100%
+    max-width: 100%
