@@ -1,34 +1,26 @@
 .ReactedApp__header
-  height: 2.75rem
-  padding: 0.5rem 1rem
-  color: white
-  background: $navy
-  border-bottom: lighten($navy, 20%)
+  height: 3.75rem
   position: relative
-
-  .ReactedApp__header-wrapper
+  width: calc(100% - 32px)
+  max-width: 300px
+  margin: 0 auto
+  transition: all 0.5s ease-in-out
+  @media (min-width: 640px)
+    max-width: 100%
     width: 100%
-    max-width: 300px
-    position: absolute
-    left: 50%
-    margin-left: -150px
-    transition: all 0.5s ease-in-out
-    @media (min-width: 940px)
-      max-width: 35%
-      left: 0
-      margin-left: 0
-      transition: all 0.5s linear
-
-  .ReactedApp__logo
-    animation: App-logo-spin infinite 20s linear
-    display: inline-block
-    height: auto
-    max-height: 2.5rem
-    max-width: 25%
+    left: 0
+    margin-left: 0
+    transition: all 0.5s linear
 
   .ReactedApp__title
     display: inline-block
-    line-height: 2.5rem
-    color: $white
+    line-height: 3.5rem
+    color: $navy
     vertical-align: top
-    max-width: 75%
+    width: calc(100% - 50px)
+    text-align: center
+    margin: 0 auto
+    @media (min-width: 640px)
+      width: 100%
+
+@import "./reactedApp__links"
